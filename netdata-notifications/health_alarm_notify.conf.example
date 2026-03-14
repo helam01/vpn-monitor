@@ -1,0 +1,32 @@
+# ─────────────────────────────────────────────
+# CONFIGURAÇÃO DE NOTIFICAÇÕES — EMAIL VIA SMTP
+# ─────────────────────────────────────────────
+
+# Habilita apenas email
+SEND_EMAIL="YES"
+SEND_SLACK="NO"
+SEND_TELEGRAM="NO"
+SEND_PUSHOVER="NO"
+SEND_TWILIO="NO"
+
+# Destinatário dos alertas
+DEFAULT_RECIPIENT_EMAIL=""
+
+# ── Configurações do SMTP externo ──────────────
+# Troque pelas suas credenciais reais
+SMTP_HOST=""
+SMTP_PORT=""
+SMTP_USERNAME=""
+SMTP_PASSWORD=""
+SMTP_STARTTLS=""
+
+# Remetente do email
+EMAIL_SENDER="Netdata Monitor <seu-usuario@exemplo.com>"
+
+# Nível mínimo para notificar (warning ou critical)
+HEALTH_ALARM_NOTIFY_VERBOSITY="warning"
+
+# Roles de notificação
+role_recipients_email[sysadmin]="${DEFAULT_RECIPIENT_EMAIL}"
+role_recipients_email[webmaster]="${DEFAULT_RECIPIENT_EMAIL}"
+role_recipients_email[dba]="${DEFAULT_RECIPIENT_EMAIL}"
